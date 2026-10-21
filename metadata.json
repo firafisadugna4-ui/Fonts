@@ -1,0 +1,6 @@
+{
+  "name": "korme.com Studio",
+  "description": "Professional wallpaper image and keyboard font customization platform offering high-resolution backgrounds, unique typographic styles, real-time preview, social sharing, and cloud project saving.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

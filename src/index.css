@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #09090b;
+    color: #f4f4f5;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+/* Custom Scrollbar for sleek dark design */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(24, 24, 27, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(63, 63, 70, 0.8);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(113, 113, 122, 0.9);
+}
+
+/* Keycap 3D Tactile Classes */
+.keycap-bevel {
+  box-shadow: 
+    0 1px 0 rgba(255, 255, 255, 0.15) inset,
+    0 -3px 0 rgba(0, 0, 0, 0.45) inset,
+    0 4px 6px -1px rgba(0, 0, 0, 0.5),
+    0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  transition: transform 0.05s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.05s ease;
+}
+
+.keycap-pressed {
+  transform: translateY(2px) scale(0.97) !important;
+  box-shadow: 
+    0 1px 0 rgba(255, 255, 255, 0.05) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.3) inset,
+    0 1px 2px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* RGB Underglow Animation */
+@keyframes rgb-wave {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+.rgb-wave-active {
+  animation: rgb-wave 6s linear infinite;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(18, 18, 22, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
